@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+	<h1>Edit Book</h1>
+    <form action="#" th:action="@{/editbook}" th:object="${book}" method="post">
+        Enter details of old book to edit
+    	<p>Name: <input type="text" th:field="*{name}" /></p>
+        <p>Description: <input type="text" th:field="*{description}" /></p>
+		<p>Author: <input type="text" th:field="*{author}" /></p>
+		<p>Year of Release: <input type="number" th:field="*{yearOfRelease}" /></p>
+		<p>Rating: <input type="number" th:field="*{rating}" /></p>
+
+        Update your book details
+
+    	<p>Name: <input type="text" th:field="*{name2}" /></p>
+        <p>Description: <input type="text" th:field="*{description2}" /></p>
+		<p>Author: <input type="text" th:field="*{author2}" /></p>
+		<p>Year of Release: <input type="number" th:field="*{yearOfRelease2}" /></p>
+		<p>Rating: <input type="number" th:field="*{rating2}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
